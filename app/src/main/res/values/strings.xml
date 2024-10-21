@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">iTourAtt</string>
+    <string name="title_intro">A Vida é muito boa para você não se <b><font color="#003164">aventurar!</font></b></string>
+    <string name="text_intro">A rotina pode esperar. Permita-se viver novas histórias, conhecer novas culturas e se surpreender com o inesperado. Cada destino é um novo capítulo esperando para ser escrito. \n\nVamos embarcar juntos nessa aventura?</string>
+    <string name="title_start">Você não precisa de uma razão para viajar, apenas um <b><font color="#003164">destino!</font></b></string>
+    <string name="text_start">Descubra o mundo com a gente\n\nSua próxima aventura começa aqui!</string>
+    <string name="register">Ainda não possui conta? <font color="#003164">Cadastre-se</font></string>
+    <string name="login">Já possui conta?<font color="#003164"> Faça o login</font></string>
+    <string name="title_home">Explore o mundo\n<font color="#003164">INTEIRO</font></string>
+</resources>

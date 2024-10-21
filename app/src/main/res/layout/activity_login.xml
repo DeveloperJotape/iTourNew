@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16sp"
+            android:fontFamily="@font/georama_light"
+            android:text="Entre Agora"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/textLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40sp"
+            android:fontFamily="@font/georama_light"
+            android:text="Por favor, faça o login para acessar o aplicativo"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/formLogin"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="www.exemplo.com"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/form"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/georama_light"
+            android:layout_marginTop="32dp"
+            />
+
+        <EditText
+            android:id="@+id/formPassword"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/form"
+            android:fontFamily="@font/georama_light"
+            android:hint="**********"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtEsqueceu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Esqueceu a senha?"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/blue"
+            android:textStyle="normal"
+            android:fontFamily="@font/georama_light"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/button"
+            android:layout_marginTop="64dp"
+            android:onClick="homeActivity"
+            >
+
+            <TextView
+                android:id="@+id/textBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/georama_light"
+                android:text="Entrar"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:fontFamily="@font/georama_light"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:layout_marginTop="32dp"
+            android:textStyle="normal"
+            android:onClick="registerActivity"
+            android:textColor="@color/text_gray"
+            />
+
+        <TextView
+            android:id="@+id/txtConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-\nOu se conecte!"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:fontFamily="@font/georama_light"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:textStyle="normal"
+            android:textColor="@color/text_gray"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/facebook"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"/>
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/instagram"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"/>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
