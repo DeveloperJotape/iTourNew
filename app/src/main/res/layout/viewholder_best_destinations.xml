@@ -1,7 +1,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="268dp"
-    android:layout_height="384dp"
+    android:layout_height="400dp"
     android:layout_margin="8dp"
     android:background="@drawable/card_bg">
 
@@ -9,67 +10,101 @@
         android:id="@+id/cardImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="98dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cristo_redentor" />
 
-    <TextView
-        android:id="@+id/cardTitle"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/georama_bold"
-        android:text="Título"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/cardImg"
-        app:layout_constraintTop_toBottomOf="@+id/cardImg" />
-
-    <ImageView
-        android:id="@+id/cardStar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cardTitle"
-        app:layout_constraintEnd_toStartOf="@+id/cardScore"
-        app:layout_constraintTop_toTopOf="@+id/cardTitle"
-        app:srcCompat="@drawable/star" />
-
-    <TextView
-        android:id="@+id/cardScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/georama"
-        android:text="score"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@+id/cardTitle"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="@+id/cardImg"
-        app:layout_constraintTop_toTopOf="@+id/cardTitle" />
-
-    <ImageView
-        android:id="@+id/cardLocationIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@+id/cardImg"
-        app:layout_constraintTop_toBottomOf="@+id/cardTitle"
-        app:srcCompat="@drawable/location" />
+        app:layout_constraintTop_toBottomOf="@+id/cardImg">
 
-    <TextView
-        android:id="@+id/cardTxtLocation"
-        android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/cardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/georama_bold"
+                android:text="Título"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/cardStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardTitle"
+                app:layout_constraintEnd_toStartOf="@+id/cardScore"
+                app:layout_constraintTop_toTopOf="@+id/cardTitle"
+                app:srcCompat="@drawable/star" />
+
+            <TextView
+                android:id="@+id/cardScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/georama"
+                android:text="score"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cardTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/georama"
-        android:text="Location"
-        android:textColor="@color/dark_gray"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@+id/cardLocationIcon"
-        app:layout_constraintStart_toEndOf="@+id/cardLocationIcon"
-        app:layout_constraintTop_toTopOf="@+id/cardLocationIcon" />
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cardImg"
+        app:layout_constraintStart_toStartOf="@+id/cardImg"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/cardLocationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/location" />
+
+            <TextView
+                android:id="@+id/cardTxtLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/georama"
+                android:text="Location"
+                android:textColor="@color/dark_gray"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cardLocationIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
