@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.itouratt" />
+                  <option name="mobileSdkAppId" value="1:291039016276:android:f3690f14188dfc835904c1" />
+                  <option name="projectId" value="itour-1e552" />
+                  <option name="projectNumber" value="291039016276" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
