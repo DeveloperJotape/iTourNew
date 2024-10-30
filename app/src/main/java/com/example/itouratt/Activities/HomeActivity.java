@@ -1,6 +1,8 @@
 package com.example.itouratt.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -45,5 +47,10 @@ public class HomeActivity extends AppCompatActivity {
         adapterBestDestinarions = new BestDestinationsAdapter(itens);
         recyclerViewBestDestinations.setAdapter(adapterBestDestinarions);
 
+    }
+
+    public void detailsActivity(View view) {
+        Intent in = new Intent(HomeActivity.this, DetailsActivity.class);
+        startActivity(in);
     }
 }
