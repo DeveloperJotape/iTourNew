@@ -1,5 +1,6 @@
 package com.example.itouratt.Adapters;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,19 +13,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.GranularRoundedCorners;
+import com.example.itouratt.Activities.DetailsActivity;
 import com.example.itouratt.Domains.DestinationsDomain;
 import com.example.itouratt.R;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class BestDestinationsAdapter extends RecyclerView.Adapter<BestDestinationsAdapter.ViewHolder> {
     ArrayList<DestinationsDomain> itens;
-    DecimalFormat formatter;
 
     public BestDestinationsAdapter(ArrayList<DestinationsDomain> itens) {
         this.itens = itens;
-        formatter = new DecimalFormat("###,###,###,###");
     }
 
     @NonNull
@@ -48,6 +47,13 @@ public class BestDestinationsAdapter extends RecyclerView.Adapter<BestDestinatio
                 .load(drawableResId)
                 .transform(new CenterCrop(), new GranularRoundedCorners(40,40,40,40))
                 .into(holder.imgCard);
+
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
+            intent.putExtra("object", itens.get(position));
+            holder.itemView.getContext().startActivity(intent);
+
+        });
 
     }
 

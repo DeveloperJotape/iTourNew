@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity {
 
-    public RecyclerView.Adapter adapterBestDestinarions;
+    public RecyclerView.Adapter adapterBestDestinations;
     private RecyclerView recyclerViewBestDestinations;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,13 +44,9 @@ public class HomeActivity extends AppCompatActivity {
 
         recyclerViewBestDestinations = findViewById(R.id.view_best_destination);
         recyclerViewBestDestinations.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        adapterBestDestinarions = new BestDestinationsAdapter(itens);
-        recyclerViewBestDestinations.setAdapter(adapterBestDestinarions);
+        adapterBestDestinations = new BestDestinationsAdapter(itens);
+        recyclerViewBestDestinations.setAdapter(adapterBestDestinations);
 
     }
 
-    public void detailsActivity(View view) {
-        Intent in = new Intent(HomeActivity.this, DetailsActivity.class);
-        startActivity(in);
-    }
 }
