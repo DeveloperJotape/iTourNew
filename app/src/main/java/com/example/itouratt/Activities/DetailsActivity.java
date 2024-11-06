@@ -15,9 +15,9 @@ import com.example.itouratt.R;
 
 public class DetailsActivity extends AppCompatActivity {
 
-    private TextView txtTitle, txtLocation, txtScore,txtDescription;
+    private TextView txtTitle, txtScore, txtLocation, txtDescription;
     private DestinationsDomain item;
-    private ImageView imgDestiny, btnBack;
+    private ImageView imgLoc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,15 +34,14 @@ public class DetailsActivity extends AppCompatActivity {
 
         txtTitle.setText(item.getTitle());
         txtLocation.setText(item.getLocation());
-        txtScore.setText("" +(int)item.getScore());
+        txtScore.setText(""+(int)item.getScore());
         txtDescription.setText(item.getDescription());
 
         int drawableResId = getResources().getIdentifier(item.getLocImage(), "drawable", getPackageName());
         Glide.with(this)
                 .load(drawableResId)
-                .into(imgDestiny);
+                .into(imgLoc);
 
-        btnBack.setOnClickListener(v -> finish());
     }
 
     private void initView() {
@@ -50,9 +49,12 @@ public class DetailsActivity extends AppCompatActivity {
         txtLocation = findViewById(R.id.txtLocation);
         txtScore = findViewById(R.id.txtScore);
         txtDescription = findViewById(R.id.txtDescription);
-        imgDestiny = findViewById(R.id.imgDestiny);
-        btnBack.findViewById(R.id.btnBack);
+        imgLoc = findViewById(R.id.imgLoc);
+    }
 
+    public void homeActivity(View view) {
+        Intent in = new Intent(DetailsActivity.this, HomeActivity.class);
+        startActivity(in);
     }
 
 }

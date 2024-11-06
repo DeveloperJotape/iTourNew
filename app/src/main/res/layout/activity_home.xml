@@ -55,7 +55,7 @@
                 android:gravity="bottom|end"
                 android:text="Veja todos"
                 android:textColor="@color/green"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
 
         </LinearLayout>
 

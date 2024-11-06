@@ -8,11 +8,11 @@ public class DestinationsDomain implements Serializable {
     private String location;
     private String country;
     private String description;
-    private double score;
+    private int score;
     private double price;
     private String locImage;
 
-    public DestinationsDomain(String title, String location, String country, String description, double score, double price, String locImage) {
+    public DestinationsDomain(String title, String location, String country, String description, int score, double price, String locImage) {
         this.title = title;
         this.location = location;
         this.country = country;
@@ -54,11 +54,11 @@ public class DestinationsDomain implements Serializable {
         this.description = description;
     }
 
-    public double getScore() {
+    public int getScore() {
         return score;
     }
 
-    public void setScore(double score) {
+    public void setScore(int score) {
         this.score = score;
     }
 

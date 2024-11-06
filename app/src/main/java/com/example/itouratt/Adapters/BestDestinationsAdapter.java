@@ -20,10 +20,10 @@ import com.example.itouratt.R;
 import java.util.ArrayList;
 
 public class BestDestinationsAdapter extends RecyclerView.Adapter<BestDestinationsAdapter.ViewHolder> {
-    ArrayList<DestinationsDomain> itens;
+    ArrayList<DestinationsDomain> items;
 
-    public BestDestinationsAdapter(ArrayList<DestinationsDomain> itens) {
-        this.itens = itens;
+    public BestDestinationsAdapter(ArrayList<DestinationsDomain> items) {
+        this.items = items;
     }
 
     @NonNull
@@ -35,12 +35,12 @@ public class BestDestinationsAdapter extends RecyclerView.Adapter<BestDestinatio
 
     @Override
     public void onBindViewHolder(@NonNull BestDestinationsAdapter.ViewHolder holder, int position) {
-        holder.txtTitle.setText(itens.get(position).getTitle());
-        holder.txtLocation.setText(itens.get(position).getLocation());
-        holder.txtScore.setText(""+itens.get(position).getScore());
+        holder.txtTitle.setText(items.get(position).getTitle());
+        holder.txtLocation.setText(items.get(position).getLocation());
+        holder.txtScore.setText(""+items.get(position).getScore());
 
         int drawableResId = holder.itemView.getResources().
-                getIdentifier(itens.get(position).getLocImage(), "drawable",
+                getIdentifier(items.get(position).getLocImage(), "drawable",
                         holder.itemView.getContext().getPackageName());
 
         Glide.with(holder.itemView.getContext())
@@ -48,18 +48,17 @@ public class BestDestinationsAdapter extends RecyclerView.Adapter<BestDestinatio
                 .transform(new CenterCrop(), new GranularRoundedCorners(40,40,40,40))
                 .into(holder.imgCard);
 
-        holder.itemView.setOnClickListener(v -> {
+        holder.itemView.setOnClickListener(view -> {
             Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
-            intent.putExtra("object", itens.get(position));
+            intent.putExtra("object", items.get(position));
             holder.itemView.getContext().startActivity(intent);
-
         });
 
     }
 
     @Override
     public int getItemCount() {
-        return itens.size();
+        return items.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
