@@ -44,7 +44,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/formLogin"
+            android:id="@+id/formEmail"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:hint="www.exemplo.com"

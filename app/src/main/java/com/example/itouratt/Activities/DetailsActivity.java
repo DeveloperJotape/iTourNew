@@ -57,4 +57,9 @@ public class DetailsActivity extends AppCompatActivity {
         startActivity(in);
     }
 
+    public void appointmentActivity() {
+        Intent in = new Intent(DetailsActivity.this, AppointmentActivity.class);
+        startActivity(in);
+    }
+
 }

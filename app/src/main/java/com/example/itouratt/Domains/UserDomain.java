@@ -2,13 +2,17 @@ package com.example.itouratt.Domains;
 
 public class UserDomain {
 
-    private String UUID, name, email, password;
+    private String UUID;
+    private String nome;
+    private String email;
+    private String password;
 
     public UserDomain() {
     }
 
-    public UserDomain(String UUID, String name, String email, String password) {
-        this.name = name;
+    public UserDomain(String UUID, String nome, String email, String password) {
+        this.UUID = UUID;
+        this.nome = nome;
         this.email = email;
         this.password = password;
     }
@@ -21,12 +25,12 @@ public class UserDomain {
         this.UUID = UUID;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getEmail() {

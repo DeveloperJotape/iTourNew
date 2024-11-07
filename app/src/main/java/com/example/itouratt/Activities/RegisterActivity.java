@@ -2,9 +2,9 @@ package com.example.itouratt.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -27,29 +27,30 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_register);
+
         startFirebase();
     }
 
-    private void startFirebase() {
+    public void startFirebase() {
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
     }
 
     public void registerUser() {
-        EditText name = findViewById(R.id.formName);
-        EditText email = findViewById(R.id.formEmail);
-        EditText password = findViewById(R.id.formPassword);
-        UserDomain user = new UserDomain(UUID.randomUUID().toString(),
-                                            name.getText().toString(),
-                                            email.getText().toString(),
-                                            password.getText().toString());
-        databaseReference.child("user").child(user.getUUID()).setValue(user);
-        name.setText(null);
-        email.setText(null);
-        Toast.makeText(this, "Usuário registrado com sucesso!", Toast.LENGTH_SHORT).show();
+        EditText userName = findViewById(R.id.formName);
+        EditText userEmail = findViewById(R.id.formEmail);
+        EditText userPassword = findViewById(R.id.formPassword);
 
+        UserDomain usuario = new UserDomain(UUID.randomUUID().toString(),
+                userName.getText().toString(),
+                userEmail.getText().toString(),
+                userPassword.getText().toString());
+        databaseReference.child("usuario").child(usuario.getUUID()).setValue(usuario);
+        userName.setText(null);
+        userEmail.setText(null);
+        userPassword.setText(null);
+        Toast.makeText(this, "Usuário criado com sucesso!", Toast.LENGTH_SHORT).show();
     }
-
 
     public void loginActivity(View view) {
         Intent in = new Intent(RegisterActivity.this, LoginActivity.class);

@@ -44,7 +44,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/formRegisterName"
+            android:id="@+id/formName"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:hint="Nome completo"
@@ -59,7 +59,7 @@
             />
 
         <EditText
-            android:id="@+id/formRegisterEmail"
+            android:id="@+id/formEmail"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:hint="www.exemplo.com"
@@ -70,11 +70,11 @@
             android:padding="16dp"
             android:textSize="16sp"
             android:fontFamily="@font/georama_light"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             />
 
         <EditText
-            android:id="@+id/formRegisterPassword"
+            android:id="@+id/formPassword"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginLeft="16dp"
@@ -107,11 +107,12 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:id="@+id/txtRegister"
+            android:id="@+id/txtRedirectLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/login"
