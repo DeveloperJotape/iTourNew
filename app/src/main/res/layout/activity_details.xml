@@ -178,7 +178,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/georama_light"
-                    android:text="Agende sua viagem!"
+                    android:text="Continuar"
                     android:textColor="@color/white"
                     android:textSize="16sp"
                     android:textStyle="normal"

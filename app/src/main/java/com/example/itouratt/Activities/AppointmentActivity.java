@@ -4,11 +4,14 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 import com.example.itouratt.R;
 
 import java.text.SimpleDateFormat;
@@ -30,6 +33,7 @@ public class AppointmentActivity extends AppCompatActivity {
 
         initPassengers();
         initDatePickup();
+        setVariable();
     }
 
     private void initDatePickup() {
@@ -83,6 +87,16 @@ public class AppointmentActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void setVariable(){
+        ConstraintLayout btnConfirmAppointment = findViewById(R.id.btnConfirmAppointment);
+        btnConfirmAppointment.setOnClickListener(view -> {
+            Intent in = new Intent(AppointmentActivity.this, TicketsActivity.class);
+            in.putExtra("date", departureDate.getText().toString());
+            in.putExtra("numPassengers", passengers);
+            startActivity(in);
+        });
     }
 
     private void showDatePickerDialog(TextView textView) {
