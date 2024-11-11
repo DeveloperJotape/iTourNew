@@ -9,9 +9,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.example.itouratt" />
-                  <option name="mobileSdkAppId" value="1:291039016276:android:f3690f14188dfc835904c1" />
-                  <option name="projectId" value="itour-1e552" />
-                  <option name="projectNumber" value="291039016276" />
+                  <option name="mobileSdkAppId" value="1:289208865385:android:ba25a72e22f8d0238ec8f8" />
+                  <option name="projectId" value="itour-36aac" />
+                  <option name="projectNumber" value="289208865385" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

@@ -42,6 +42,9 @@
         <activity
             android:name=".Activities.DetailsActivity"
             android:exported="true" />
+        <activity
+            android:name=".Activities.AppointmentActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -26,19 +26,20 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginTop="32dp"
                 android:layout_marginBottom="32dp"
-                android:onClick="screenHome">
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                >
 
                 <ImageView
                     android:id="@+id/btnBack"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="64dp"
+                    android:onClick="homeActivity"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/txtDetails"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/back"
-                    android:onClick="homeActivity"/>
+                    />
 
                 <TextView
                     android:id="@+id/txtDetails"

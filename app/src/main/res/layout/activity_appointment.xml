@@ -26,19 +26,18 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginTop="32dp"
                 android:layout_marginBottom="32dp"
-                android:onClick="screenHome">
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp">
 
                 <ImageView
                     android:id="@+id/btnBack"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="64dp"
+                    android:onClick="detailsActivity"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/txtDetails"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/back"
-                    android:onClick="homeActivity"/>
+                    app:srcCompat="@drawable/back" />
 
                 <TextView
                     android:id="@+id/txtDetails"
@@ -76,67 +75,87 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
-                        android:id="@+id/fromTxt"
+                        android:id="@+id/departureText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/georama"
-                        android:text="De"
+                        android:text="Data de ida"
                         android:textColor="@color/black"
-                        android:textSize="16dp" />
+                        android:textSize="16dp"
+                        android:layout_marginBottom="8dp"/>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/blue_box"
+                        >
 
-                        <EditText
-                            android:id="@+id/formLocation"
-                            android:layout_width="match_parent"
-                            android:layout_height="56dp"
-                            android:background="@drawable/blue_box"
-                            android:textColorHint="@color/white"
+                        <TextView
+                            android:id="@+id/departureDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
                             android:fontFamily="@font/georama_light"
-                            android:hint="Location"
+                            android:hint="16/05/2024"
                             android:inputType="text"
                             android:padding="16dp"
+                            android:textColor="@color/white"
                             android:textSize="16sp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="16dp"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/btnDeparture"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginRight="16dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/departureDate"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/departureDate"
+                            app:srcCompat="@drawable/arrow_down" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <TextView
-                        android:id="@+id/fromTxt2"
+                        android:id="@+id/returnText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/georama"
-                        android:text="Para"
+                        android:layout_marginTop="16dp"
+                        android:text="Data de volta"
                         android:textColor="@color/black"
-                        android:textSize="16dp" />
+                        android:textSize="16dp"
+                        android:layout_marginBottom="8dp"/>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/blue_box">
 
-                        <EditText
-                            android:id="@+id/travelFormTo"
-                            android:layout_width="match_parent"
-                            android:layout_height="56dp"
-                            android:background="@drawable/blue_box"
-                            android:textColorHint="@color/white"
+                        <TextView
+                            android:id="@+id/returnDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
                             android:fontFamily="@font/georama_light"
-                            android:hint="Location"
+                            android:hint="16/05/2024"
                             android:inputType="text"
                             android:padding="16dp"
+                            android:textColor="@color/white"
                             android:textSize="16sp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="16dp"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/btnReturn"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginRight="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/returnDate"
+                            app:srcCompat="@drawable/arrow_down" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <TextView
@@ -150,28 +169,54 @@
                         android:layout_marginTop="32dp"/>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/blue_box"
+                        android:layout_marginTop="6dp"
+                        >
 
-                        <EditText
-                            android:id="@+id/travelPassangers"
-                            android:layout_width="64dp"
+                        <ImageView
+                            android:id="@+id/btnMinus"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginLeft="15dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/travelPassengers"
+                            app:layout_constraintEnd_toStartOf="@+id/travelPassengers"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/travelPassengers"
+                            app:srcCompat="@drawable/minus"
+                            />
+
+                        <TextView
+                            android:id="@+id/travelPassengers"
+                            android:layout_width="wrap_content"
                             android:layout_height="56dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="16dp"
-                            android:background="@drawable/blue_box"
                             android:fontFamily="@font/georama_light"
                             android:hint="1"
                             android:inputType="number"
                             android:padding="16dp"
+                            android:textColor="@color/white"
                             android:textColorHint="@color/white"
                             android:textSize="16sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0" />
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/btnPlus"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/travelPassengers"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/travelPassengers"
+                            app:layout_constraintTop_toTopOf="@+id/travelPassengers"
+                            app:srcCompat="@drawable/plus"
+                            />
+
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
@@ -193,7 +238,6 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/button"
-                android:onClick="appointmentActivity"
                 >
 
                 <TextView
