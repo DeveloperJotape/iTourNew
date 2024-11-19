@@ -24,6 +24,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         initRecyclerView();
+
     }
 
     private void initRecyclerView() {

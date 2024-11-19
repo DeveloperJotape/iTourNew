@@ -7,4 +7,5 @@
     <string name="register">Ainda não possui conta? <font color="#003164">Cadastre-se</font></string>
     <string name="login">Já possui conta?<font color="#003164"> Faça o login</font></string>
     <string name="title_home">Explore o mundo\n<font color="#003164">INTEIRO</font></string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>

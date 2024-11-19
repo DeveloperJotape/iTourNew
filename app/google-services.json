@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "289208865385",
-    "project_id": "itour-36aac",
-    "storage_bucket": "itour-36aac.firebasestorage.app"
+    "project_number": "1055758177230",
+    "project_id": "itour-d6083",
+    "storage_bucket": "itour-d6083.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:289208865385:android:ba25a72e22f8d0238ec8f8",
+        "mobilesdk_app_id": "1:1055758177230:android:dcc3f3478f267c16cc919f",
         "android_client_info": {
           "package_name": "com.example.itouratt"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyA3dewPXDtH4ZY3IpyJ8qub30hZQPSTHPA"
+          "current_key": "AIzaSyAig6UT3xa8wFKab_c-nYm6SgtM4Dk7-4E"
         }
       ],
       "services": {

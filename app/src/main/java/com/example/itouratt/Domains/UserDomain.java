@@ -1,28 +1,28 @@
 package com.example.itouratt.Domains;
 
+import java.util.List;
+
 public class UserDomain {
 
-    private String UUID;
     private String nome;
     private String email;
     private String password;
+    private List<DestinationsDomain> travels;
 
     public UserDomain() {
     }
 
-    public UserDomain(String UUID, String nome, String email, String password) {
-        this.UUID = UUID;
+    public UserDomain(String nome, String email, String password) {
         this.nome = nome;
         this.email = email;
         this.password = password;
     }
 
-    public String getUUID() {
-        return UUID;
-    }
-
-    public void setUUID(String UUID) {
-        this.UUID = UUID;
+    public UserDomain(String nome, String email, String password, List<DestinationsDomain> travels) {
+        this.nome = nome;
+        this.email = email;
+        this.password = password;
+        this.travels = travels;
     }
 
     public String getNome() {
@@ -47,5 +47,13 @@ public class UserDomain {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<DestinationsDomain> getTravels() {
+        return travels;
+    }
+
+    public void setTravels(List<DestinationsDomain> travels) {
+        this.travels = travels;
     }
 }

@@ -17,7 +17,7 @@ public class DetailsActivity extends AppCompatActivity {
 
     private TextView txtTitle, txtScore, txtLocation, txtDescription;
     private DestinationsDomain item;
-    private ImageView imgLoc;
+    private ImageView imgLoc, btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +45,7 @@ public class DetailsActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        btnBack = findViewById(R.id.btnBack);
         txtTitle = findViewById(R.id.txtTitle);
         txtLocation = findViewById(R.id.txtLocation);
         txtScore = findViewById(R.id.txtScore);
